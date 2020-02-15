@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Venda;
+use App\DataTables\VendaDataTable;
 use Illuminate\Http\Request;
 
 class VendaController extends Controller
@@ -12,9 +13,9 @@ class VendaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(VendaDataTable $vendaDatatable)
     {
-        //
+        return $vendaDatatable->render('venda.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class VendaController extends Controller
      */
     public function create()
     {
-        //
+        return view ('venda.form');   
     }
 
     /**

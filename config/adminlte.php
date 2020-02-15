@@ -150,6 +150,7 @@ return [
         ],
         [
             'text'       => 'Vendas',
+            'url'        =>'venda',
             'icon_color' => 'red',
         ],
         [

@@ -34,6 +34,9 @@ class PessoaDatatable extends DataTable
                 );
                 return $acoes;
 
+            })
+            ->editColumn('grupo',function($pessoa){
+                return Pessoa::GRUPOS[$pessoa->grupo];
             });
 
         }

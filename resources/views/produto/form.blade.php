@@ -25,7 +25,7 @@
         {!! Form::text('preco_venda') !!}
 
         {!! Form::label('unidade_medida', 'Unidade de Medida') !!}
-        {!! Form::text('unidade_medida') !!}
+        {!! Form::select('unidade_medida', $unidades_medidas) !!}
 
         {!! Form::label('fabricante_id', 'Fabricante')!!}
         {!!Form::select('fabricante_id',$fabricantes)!!}

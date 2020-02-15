@@ -6,6 +6,8 @@ use App\DataTables\PessoaDatatable;
 use App\Pessoa;
 use Illuminate\Http\Request;
 
+use const App\GRUPOS;
+
 class PessoaController extends Controller
 {
     /**
@@ -20,8 +22,10 @@ class PessoaController extends Controller
     }
 
     public function create()
-    {
-        return view('pessoa.form');
+    {   $grupo=Pessoa::GRUPOS;
+        return view('pessoa.form',[
+            'grupo'=>$grupo
+        ]);
     }
 
     public function store(Request $request)
@@ -73,5 +77,25 @@ class PessoaController extends Controller
         }catch(\Throwable $th){
             abort(403,'Erro ao excluir');
         }
+
+        
+    }
+
+    public function listaClientes(Request $request){
+
+        $termoPesquisa = trim($request->searchTearm);
+
+        if (empty($termoPesquisa)){
+            return Pessoa::select('id','nome as text')
+                                ->where('grupo',Pessoa::CLIENTE)
+                                ->limit(10)
+                                ->get();
+        }
+
+        return Pessoa::select('id','nome as text')
+                            ->where('grupo',Pessoa::CLIENTE)
+                            ->where('nome','like','%' .$termoPesquisa.'%')
+                            ->limit(10)
+                            ->get();
     }
 }

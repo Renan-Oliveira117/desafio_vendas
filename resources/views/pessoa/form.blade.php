@@ -33,12 +33,7 @@
     {!! Form::text('localidade') !!}
 
     {!! Form::label('grupo') !!}
-    {!! Form::select('grupo',[
-                            '0'=>'Fornecedor',
-                            '1'=>'Cliente',
-                            '2'=>'Colaborador',
-                            '3'=>'Tercerizado',
-                            ]); !!}
+    {!! Form::select('grupo',$grupo)!!}
 
     {!! Form::submit('Salvar') !!}
     {!! Form::close() !!}

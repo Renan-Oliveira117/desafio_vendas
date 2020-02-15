@@ -21,4 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('fabricante', 'FabricanteController');
 Route::resource('pessoa', 'PessoaController');
-Route::resource('produto', 'produtoController');
+Route::resource('produto', 'ProdutoController');
+Route::resource('venda', 'VendaController');
+
+Route::get('lista-cliente', 'PessoaController@listaClientes')->name('lista.clientes');

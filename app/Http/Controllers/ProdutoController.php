@@ -19,8 +19,15 @@ class ProdutoController extends Controller
 
     public function create()
     {
+        //dd(Produto::UNIDADE_MEDIDAS);
         $fabricantes=Fabricante::all()->pluck('nome','id');
-        return view ('produto.form',compact('fabricantes'));
+        $unidade_medidas = Produto::UNIDADE_MEDIDAS;
+
+        return view ('produto.form',[
+            'fabricantes' => $fabricantes,
+            'unidades_medidas' => $unidade_medidas
+        ]);
+
     }
 
    
