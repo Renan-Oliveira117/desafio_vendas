@@ -21,25 +21,26 @@ class VendaDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', 'venda.action');
+            ->addColumn('action', function($venda){
+                return link_to(route('venda.show', $venda), 'VER',['class'=> 'btn btn-sm btn-primary']);
+              
+            })
+          
+            ->editColumn('pessoa_id', function ($venda){
+                return $venda->pessoa->nome;
+            })
+            ->editColumn('created_at', function ($venda){
+                return $venda->created_at->format('d/m/Y');
+            });
     }
 
-    /**
-     * Get query source of dataTable.
-     *
-     * @param \App\Venda $model
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
+   
     public function query(Venda $model)
     {
         return $model->newQuery();
     }
 
-    /**
-     * Optional method if you want to use html builder.
-     *
-     * @return \Yajra\DataTables\Html\Builder
-     */
+    
     public function html()
     {
         return $this->builder()
@@ -57,34 +58,24 @@ class VendaDataTable extends DataTable
                     );
     }
 
-    /**
-     * Get columns.
-     *
-     * @return array
-     */
+    
     protected function getColumns()
     {
         return [
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
-                  ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('observacao'),
-            Column::make('desconto'),
-            Column::make('acrescimo'),
-            Column::make('total'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+                  ->width(60),
+            Column::make('pessoa_id')->tile('Cliente'),
+            Column::make('desconto')->title('Desconto'),
+            Column::make('acrescimo')->title('Acréscimo'),
+            Column::make('total')->title('Total'),
+            Column::make('created_at')->title('Data da venda'),
+           
         ];
     }
 
-    /**
-     * Get filename for export.
-     *
-     * @return string
-     */
+   
     protected function filename()
     {
         return 'Venda_' . date('YmdHis');

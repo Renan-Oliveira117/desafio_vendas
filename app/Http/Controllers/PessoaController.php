@@ -83,7 +83,7 @@ class PessoaController extends Controller
 
     public function listaClientes(Request $request){
 
-        $termoPesquisa = trim($request->searchTearm);
+        $termoPesquisa = trim($request->searchTerm);
 
         if (empty($termoPesquisa)){
             return Pessoa::select('id','nome as text')

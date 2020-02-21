@@ -28,7 +28,7 @@
         {!! Form::select('unidade_medida', $unidades_medidas) !!}
 
         {!! Form::label('fabricante_id', 'Fabricante')!!}
-        {!!Form::select('fabricante_id',$fabricantes)!!}
+        {!!Form::select('fabricante_id', $fabricantes)!!}
 
         {!! Form::submit('Salvar') !!}
     {!! Form::close() !!}

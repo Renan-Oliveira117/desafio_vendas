@@ -20,4 +20,8 @@ const GRUPOS =[
     self:: REVENDEDOR => 'Revendedor',
     self:: COLABORADOR => 'Colaborador',
 ];
+
+public function vendas(){
+    return $this->hasMany(Venda::class);
+}
 }

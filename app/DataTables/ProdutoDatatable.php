@@ -41,7 +41,7 @@ class ProdutoDatatable extends DataTable
             })
 
             ->editColumn('unidade_medida',function($produto){
-                return Produto::UNIDADE_MEDIDAS[$produto->unidade_medida];
+                return Produto::UNIDADES_MEDIDAS[$produto->unidade_medida];
             })
 
             ->editColumn('created_at', function($produto){
@@ -93,8 +93,8 @@ class ProdutoDatatable extends DataTable
             Column::make('estoque'),
             Column::make('preco_custo'),
             Column::make('preco_venda'),
-            Column::make('unidade_medida'),
             Column::make('fabricante_id'),
+            Column::make('unidade_medida'),            
             Column::make('created_at'),
             
         ];

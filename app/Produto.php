@@ -13,9 +13,9 @@ class Produto extends Model
     const KG = 1;
     const CX = 2;
     
-    const UNIDADE_MEDIDAS = [
+    const UNIDADES_MEDIDAS = [
         Self::UN =>'Unidade',
-        self::KG=>'Kilo',
+        Self::KG =>'Kilo',
         Self::CX=>'Caixa'
 
     ];

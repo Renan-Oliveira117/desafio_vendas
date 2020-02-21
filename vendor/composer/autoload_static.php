@@ -499,6 +499,7 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
         'App\\DataTables\\FabricanteDatatable' => __DIR__ . '/../..' . '/app/DataTables/FabricanteDatatable.php',
         'App\\DataTables\\PessoaDatatable' => __DIR__ . '/../..' . '/app/DataTables/PessoaDatatable.php',
         'App\\DataTables\\ProdutoDatatable' => __DIR__ . '/../..' . '/app/DataTables/ProdutoDatatable.php',
+        'App\\DataTables\\VendaDataTable' => __DIR__ . '/../..' . '/app/DataTables/VendaDataTable.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Fabricante' => __DIR__ . '/../..' . '/app/Fabricante.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
