@@ -7,16 +7,43 @@
 @stop
 
 @section('content')
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     @if (isset($pessoa))
         {!! Form::model($pessoa, ['url' => route('pessoa.update',$pessoa), 'method' => 'put']) !!}
     @else
         {!! Form::open(['url' => route('pessoa.store')]) !!}
     @endif
+    <div class="form-group @error('nome') has-error @enderror">
     {!! Form::label('nome', 'Nome') !!}
-    {!! Form::text('nome') !!}
-
+    {!! Form::text('nome',null,['class'=>'form-control']) !!}
+    @error('nome')
+        <span class="help-block">{{$message}}</span>
+    @enderror
+    </div>
+    <div class="form-group @error('telefone') has-error @enderror">
     {!! Form::label('telefone', 'Telefone') !!}
-    {!! Form::text('telefone') !!}
+    {!! Form::text('telefone',null,['class'=>'form-control']) !!}
+    @error('telefone')
+        <span class="help-block">{{$message}}</span>
+    @enderror
+    </div>
+
+    <div class="form-group @error('cpf') has-error @enderror">
+        {!! Form::label('cpf', 'CPF') !!}
+        {!! Form::text('cpf',null,['class'=>'form-control']) !!}
+        @error('cpf')
+            <span class="help-block">{{$message}}</span>
+        @enderror
+        </div>
 
     {!! Form::label('email', 'E-mail') !!}
     {!! Form::text('email') !!}
@@ -43,4 +70,8 @@
 @stop
 
 @section('js')
+
+        <script>
+            $('#cpf').mask('000.000.000-00', {reverse: true});
+        </script>
 @stop

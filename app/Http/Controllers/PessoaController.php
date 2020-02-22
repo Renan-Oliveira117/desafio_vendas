@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\PessoaDatatable;
+use App\Http\Requests\PessoaRequest;
 use App\Pessoa;
 use Illuminate\Http\Request;
 
@@ -28,13 +29,15 @@ class PessoaController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(PessoaRequest $request)
     {
+            //dd($request->all());
         try {
             Pessoa::create($request->all());
             flash('Salvo com sucesso')->success();
             return redirect()->route('pessoa.index');
         } catch (\Throwable $th) {
+            dd($th->getMessage());
             flash('Ops! Ocorreu um erro ao Salvar')->error();
             return back()->withInput();
         }

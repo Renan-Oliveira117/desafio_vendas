@@ -624,6 +624,59 @@
         ]
     },
     {
+        "name": "geekcom/validator-docs",
+        "version": "3.4.0",
+        "version_normalized": "3.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/geekcom/validator-docs.git",
+            "reference": "74c7867f211fcd38fdb2cc8e3e028e8aeff42f87"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/geekcom/validator-docs/zipball/74c7867f211fcd38fdb2cc8e3e028e8aeff42f87",
+            "reference": "74c7867f211fcd38fdb2cc8e3e028e8aeff42f87",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.2"
+        },
+        "require-dev": {
+            "orchestra/testbench": "^4.0",
+            "php-coveralls/php-coveralls": "^2.2",
+            "phpstan/phpstan": "^0.12.5",
+            "phpunit/phpunit": "^8.4",
+            "squizlabs/php_codesniffer": "*",
+            "symplify/changelog-linker": "^6.1"
+        },
+        "time": "2020-01-16T20:49:27+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "geekcom\\ValidatorDocs\\ValidatorProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "geekcom\\ValidatorDocs\\": "src/validator-docs"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniel Rodrigues Lima",
+                "email": "danielrodrigues-ti@hotmail.com"
+            }
+        ],
+        "description": "Biblioteca para validação de Título de Eleitor, CPF, CNPJ, NIS e CNH"
+    },
+    {
         "name": "hamcrest/hamcrest-php",
         "version": "v2.0.0",
         "version_normalized": "2.0.0.0",
@@ -1246,6 +1299,48 @@
             "sftp",
             "storage"
         ]
+    },
+    {
+        "name": "lucascudo/laravel-pt-br-localization",
+        "version": "v1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lucascudo/laravel-pt-BR-localization.git",
+            "reference": "e2195ed6f83237eec2040528ba1440cd12d53556"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lucascudo/laravel-pt-BR-localization/zipball/e2195ed6f83237eec2040528ba1440cd12d53556",
+            "reference": "e2195ed6f83237eec2040528ba1440cd12d53556",
+            "shasum": ""
+        },
+        "time": "2020-02-01T23:26:48+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Lucascudo\\LaravelPtBRLocalization\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Cascudo",
+                "email": "lucas.sisau@gmail.com"
+            }
+        ],
+        "description": "Arquivos de linguagem em Português do Brasil (pt-BR) para Laravel >= 5.6"
     },
     {
         "name": "maatwebsite/excel",

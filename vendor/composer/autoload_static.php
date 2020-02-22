@@ -90,6 +90,10 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'g' => 
+        array (
+            'geekcom\\ValidatorDocs\\' => 22,
+        ),
         'Y' => 
         array (
             'Yajra\\DataTables\\' => 17,
@@ -164,6 +168,7 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
         ),
         'L' => 
         array (
+            'Lucascudo\\LaravelPtBRLocalization\\' => 34,
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
         ),
@@ -217,6 +222,10 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'geekcom\\ValidatorDocs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs',
         ),
         'Yajra\\DataTables\\' => 
         array (
@@ -388,6 +397,10 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
         array (
             0 => __DIR__ . '/..' . '/maatwebsite/excel/src',
         ),
+        'Lucascudo\\LaravelPtBRLocalization\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lucascudo/laravel-pt-br-localization/src',
+        ),
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
@@ -521,6 +534,7 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\PessoaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PessoaRequest.php',
         'App\\ItemVenda' => __DIR__ . '/../..' . '/app/ItemVenda.php',
         'App\\Pessoa' => __DIR__ . '/../..' . '/app/Pessoa.php',
         'App\\Produto' => __DIR__ . '/../..' . '/app/Produto.php',
@@ -2141,6 +2155,7 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
+        'Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider' => __DIR__ . '/..' . '/lucascudo/laravel-pt-br-localization/src/laravel-pt-BR-localization.php',
         'Maatwebsite\\Excel\\Cell' => __DIR__ . '/..' . '/maatwebsite/excel/src/Cell.php',
         'Maatwebsite\\Excel\\ChunkReader' => __DIR__ . '/..' . '/maatwebsite/excel/src/ChunkReader.php',
         'Maatwebsite\\Excel\\Concerns\\Exportable' => __DIR__ . '/..' . '/maatwebsite/excel/src/Concerns/Exportable.php',
@@ -4597,6 +4612,16 @@ class ComposerStaticInit598fd680ca8e99067bf22b887ec0b67e
         'Yajra\\DataTables\\Utilities\\Config' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Config.php',
         'Yajra\\DataTables\\Utilities\\Helper' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Helper.php',
         'Yajra\\DataTables\\Utilities\\Request' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Request.php',
+        'geekcom\\ValidatorDocs\\Rules\\Certidao' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/Certidao.php',
+        'geekcom\\ValidatorDocs\\Rules\\Cnh' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/Cnh.php',
+        'geekcom\\ValidatorDocs\\Rules\\Cnpj' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/Cnpj.php',
+        'geekcom\\ValidatorDocs\\Rules\\Cns' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/Cns.php',
+        'geekcom\\ValidatorDocs\\Rules\\Cpf' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/Cpf.php',
+        'geekcom\\ValidatorDocs\\Rules\\Nis' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/Nis.php',
+        'geekcom\\ValidatorDocs\\Rules\\Sanitization' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/Sanitization.php',
+        'geekcom\\ValidatorDocs\\Rules\\TituloEleitoral' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Rules/TituloEleitoral.php',
+        'geekcom\\ValidatorDocs\\Validator' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/Validator.php',
+        'geekcom\\ValidatorDocs\\ValidatorProvider' => __DIR__ . '/..' . '/geekcom/validator-docs/src/validator-docs/ValidatorProvider.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
